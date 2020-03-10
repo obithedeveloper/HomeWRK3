@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="In_Class_Bunny_Hop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="W1X-yQ-RXx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="428"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMM-EG-f7w">
+                                <rect key="frame" x="127" y="554" width="121" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="B6H-AH-daG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <state key="normal" title="Hop or Stop" backgroundImage="background">
+                                    <color key="titleColor" red="0.044719548243279061" green="1" blue="0.57308170724712837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GFp-nd-Vfl"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="frame-1" translatesAutoresizingMaskIntoConstraints="NO" id="pJ7-y1-Vje">
+                                <rect key="frame" x="71" y="138" width="240" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="217" id="4v3-JS-Tqk"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.25" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="sbe-1V-dJb">
+                                <rect key="frame" x="62" y="470" width="251" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="hvY-Ia-iB9"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="setSpeed:" destination="BYZ-38-t0r" eventType="valueChanged" id="hTd-KJ-fGX"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W1X-yQ-RXx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Zj-rr-dJ3"/>
+                            <constraint firstItem="pJ7-y1-Vje" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="805-xN-fy5"/>
+                            <constraint firstItem="LMM-EG-f7w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="CS6-Gt-MNd"/>
+                            <constraint firstItem="W1X-yQ-RXx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Q8O-Yh-8Iq"/>
+                            <constraint firstItem="sbe-1V-dJb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="QyI-de-IVw"/>
+                            <constraint firstItem="pJ7-y1-Vje" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TlA-XZ-GfA"/>
+                            <constraint firstItem="W1X-yQ-RXx" firstAttribute="centerX" secondItem="pJ7-y1-Vje" secondAttribute="centerX" id="dqh-vg-Mhc"/>
+                            <constraint firstItem="pJ7-y1-Vje" firstAttribute="centerX" secondItem="sbe-1V-dJb" secondAttribute="centerX" id="h1D-vF-2nL"/>
+                            <constraint firstItem="sbe-1V-dJb" firstAttribute="centerX" secondItem="LMM-EG-f7w" secondAttribute="centerX" id="lLm-Ex-wkJ"/>
+                            <constraint firstItem="LMM-EG-f7w" firstAttribute="top" secondItem="sbe-1V-dJb" secondAttribute="bottom" constant="86" id="n4d-c5-ile"/>
+                            <constraint firstItem="sbe-1V-dJb" firstAttribute="top" secondItem="W1X-yQ-RXx" secondAttribute="bottom" constant="44" id="qxQ-Fj-dM6"/>
+                            <constraint firstItem="pJ7-y1-Vje" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="rvS-Cf-Qre"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LMM-EG-f7w" secondAttribute="bottom" constant="20" id="tQa-tD-1W9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bunnyView" destination="pJ7-y1-Vje" id="aPx-hx-nzr"/>
+                        <outlet property="speedSlider" destination="sbe-1V-dJb" id="iaA-l9-W5A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="-30"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="960" height="540"/>
+        <image name="frame-1" width="480" height="480"/>
+    </resources>
+</document>
